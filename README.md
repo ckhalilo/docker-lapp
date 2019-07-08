@@ -29,6 +29,6 @@ On peut le consulter via /adminer
 Si vous voulez accéder a docker, utiliser composer, etx
 
 ```bash
-docker exec -it <コンテナID> bash
+docker exec -it <ID du conteneur> bash
 ```
 
