@@ -1,32 +1,34 @@
-DockerでLAPP環境を作成する
+Création d'environnement Docker LAPP
 ====
+Traduit en Français See Originals in akira345/docker-lapp
 
-DockerでLAPPでの開発環境を作成するスクリプトです。
+Docker LAPP : Acronyme de Linux Apache Postgresql PHP est script pour monter son environnement de dev
 
-PHP7+Adminer+PostgreSQL9.6の環境が作成されますので、
-簡単に開発環境を作成することが出来ます。
 
-composerもインストールされています。
+Il continent PHP7 Adminer PostgreSQL9.6
+
+composer est installer 
+
 ```bash
-git clone https://github.com/akira345/docker-lapp.git
+git clone https://github.com/ckhalilo/docker-lapp.git
 cd docker-lapp/
 docker-compose up -d
 ```
 
-phpPgAdminの代わりにadminerをインストールしています。
+adminer est le gestionnaire de Postgresql au lieu de phpPgAdmin
 
-/adminerでアクセスできます。
+On peut le consulter via /adminer
 
 |    |    |
 |---------|---------|
-|データベース種類|PostgreSQL|
-|サーバ|pgsql|
-|ユーザ名|postgres|
-|パスワード|passwd|
+|Serveur|PostgreSQL|
+|Base de donnée|pgsql|
+|Nom utilisateur|postgres|
+|Mot de passe|passwd|
 
-Dockerコンテナに入り、composerなど動かしたい場合は、
+Si vous voulez accéder a docker, utiliser composer, etx
 
 ```bash
 docker exec -it <コンテナID> bash
 ```
-な感じで。
+
