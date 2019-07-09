@@ -1,10 +1,10 @@
 Création d'environnement Docker LAPP
 ====
-Traduit en Français, voir l'originale dans akira345/docker-lapp
-
-Last Update: Problème Résolu (mcrypt, zip, Apache)
+*Traduit en Français, voir l'originale dans akira345/docker-lapp*
 
 Docker LAPP : Acronyme de Linux Apache Postgresql PHP est script pour monter son environnement de dev
+====
+__Dernière mise à jour__: Problèmes résolu (mcrypt, zip, apache HostName)
 
 
 Il continent PHP7 Adminer PostgreSQL9.6
