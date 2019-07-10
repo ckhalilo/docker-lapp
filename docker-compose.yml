@@ -1,35 +1,41 @@
 version: '2'
 services:
-  pgsql:
+  db:
     image: postgres
-    restart: always
     environment:
       POSTGRES_PASSWORD: passwd
     ports:
       - '5432:5432'
     networks:
       - docker-net
+    volumes:
+      - db-data:/var/lib/postgresql/data
   php:
     build: ./php
     ports:
       - '80:80'
+      - '9000:9000'
+    environment:
+      - SERVERNAME=php7.localdomain
+      - SERVERALIAS=
     volumes:
       - ./html:/var/www/html
-    depends_on:
-      - pgsql
+    links:
+      - db
     networks:
       - docker-net
   adminer:
     image: adminer
     restart: always
     ports:
-      - '8080:8080'
+      - '8000:8080'
     networks:
       - docker-net
 
 networks:
   docker-net:
     driver: bridge
-    
+
 volumes:
-  pg_db:
+  db-data:
+    driver: local
