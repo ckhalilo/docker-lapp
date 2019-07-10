@@ -10,10 +10,5 @@ RUN mkdir -p /var/log/httpd/php7.localdomain
 RUN echo "ServerName localhost" | tee /etc/apache2/conf-available/fqdn.conf
 RUN a2enconf fqdn && a2enmod rewrite && a2dissite 000-default && a2ensite virtual 
 RUN service apache2 start
-RUN mkdir -p /var/www/adminer \
-  && cd /var/www/adminer \
-  && wget https://www.adminer.org/static/download/4.2.5/adminer-4.2.5.php \
-  && wget https://raw.githubusercontent.com/vrana/adminer/master/designs/nicu/adminer.css \
-  && mv adminer-4.2.5.php index.php
 RUN curl -sS https://getcomposer.org/installer | php \
   && mv composer.phar /usr/local/bin/composer 
