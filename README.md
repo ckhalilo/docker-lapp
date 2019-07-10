@@ -11,7 +11,7 @@ __Dernière mise à jour__:
 * Ajouter networks (Relation Réseau)
 
 
-Il continent PHP7 Adminer PostgreSQL9.6
+Il continent PHP7 Adminer PostgreSQL
 
 composer est installer 
 
