@@ -39,3 +39,8 @@ RUN a2enconf fqdn && a2enmod rewrite expires && a2dissite 000-default && a2ensit
 RUN service apache2 start
 RUN curl -sS https://getcomposer.org/installer | php \
   && mv composer.phar /usr/local/bin/composer
+  
+  
+ # Add root .bashrc config
+# When you "docker exec -it" into the container, you will be switched as web user and placed in /var/www/html
+RUN echo "exec su - web" > /root/.bashrc
