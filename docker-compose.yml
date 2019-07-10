@@ -1,11 +1,14 @@
 version: '2'
 services:
   pgsql:
-    build: ./pgsql
+    image: postgres
+    restart: always
     environment:
       POSTGRES_PASSWORD: passwd
-    volumes:
-      - pg_db:/var/lib/postgresql/data
+    ports:
+      - '5432:5432'
+    networks:
+      - docker-net
   php:
     build: ./php
     ports:
@@ -14,5 +17,19 @@ services:
       - ./html:/var/www/html
     depends_on:
       - pgsql
+    networks:
+      - docker-net
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - '8080:8080'
+    networks:
+      - docker-net
+
+networks:
+  docker-net:
+    driver: bridge
+    
 volumes:
   pg_db:
