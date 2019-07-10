@@ -31,7 +31,7 @@ On peut le consulter via http://127.0.0.1:8080
 |Nom utilisateur|postgres|
 |Mot de passe|passwd|
 
-Si vous voulez accéder a docker, utiliser composer, etx
+Si vous voulez accéder a docker PHP, pour utiliser composer ... 
 
 ```bash
 docker-compose exec php bash
