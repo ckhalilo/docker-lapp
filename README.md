@@ -20,12 +20,11 @@ docker-compose up -d
 
 adminer est le gestionnaire de Postgresql au lieu de phpPgAdmin
 
-On peut le consulter via /adminer
+On peut le consulter via http://127.0.0.1:8080
 
 |    |    |
 |---------|---------|
-|Serveur|PostgreSQL|
-|Base de donnée|pgsql|
+|Serveur|pgsql|
 |Nom utilisateur|postgres|
 |Mot de passe|passwd|
 
