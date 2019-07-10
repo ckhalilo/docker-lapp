@@ -34,6 +34,6 @@ On peut le consulter via http://127.0.0.1:8080
 Si vous voulez accéder a docker, utiliser composer, etx
 
 ```bash
-docker exec -it <ID du conteneur> bash
+docker-compose exec php bash
 ```
 
