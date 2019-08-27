@@ -27,7 +27,7 @@ On peut le consulter via http://127.0.0.1:8080
 
 |    |    |
 |---------|---------|
-|Serveur|pgsql|
+|Serveur|db|
 |Nom utilisateur|postgres|
 |Mot de passe|passwd|
 
